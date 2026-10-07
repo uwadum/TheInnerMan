@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Thumbnail</title>
+</head>
+<body style="margin:0; background:#111; display:flex; flex-direction:column; align-items:center; padding:20px; font-family:sans-serif;">
+
+<canvas id="c" width="1280" height="720" style="max-width:100%; border:1px solid #333;"></canvas>
+
+<a id="dl" download="TheInnerMan-thumbnail.png"
+   style="margin-top:20px; display:inline-block; background:#c9b98a; color:#0d0d0d; padding:14px 28px; text-decoration:none; border-radius:6px; font-weight:bold;">
+  Tap here to download thumbnail
+</a>
+
+<script>
+const c = document.getElementById('c');
+const ctx = c.getContext('2d');
+
+// Background: black with warm radial glow from bottom-center
+const grad = ctx.createRadialGradient(640, 720, 80, 640, 720, 900);
+grad.addColorStop(0, '#3a2a10');
+grad.addColorStop(0.5, '#1a1208');
+grad.addColorStop(1, '#000000');
+ctx.fillStyle = grad;
+ctx.fillRect(0, 0, 1280, 720);
+
+// Subtle horizon line (suggests sunrise / horizon)
+const horizon = ctx.createLinearGradient(0, 0, 0, 720);
+horizon.addColorStop(0, 'rgba(0,0,0,0)');
+horizon.addColorStop(0.65, 'rgba(0,0,0,0)');
+horizon.addColorStop(0.72, 'rgba(201,185,138,0.15)');
+horizon.addColorStop(0.78, 'rgba(201,185,138,0.05)');
+horizon.addColorStop(1, 'rgba(0,0,0,0)');
+ctx.fillStyle = horizon;
+ctx.fillRect(0, 0, 1280, 720);
+
+// Main question
+ctx.fillStyle = '#ffffff';
+ctx.textAlign = 'center';
+ctx.textBaseline = 'middle';
+ctx.font = 'bold 84px Georgia, serif';
+ctx.shadowColor = 'rgba(0,0,0,0.9)';
+ctx.shadowBlur = 12;
+ctx.fillText('WHERE WILL YOU', 640, 280);
+ctx.fillText('SPEND ETERNITY?', 640, 380);
+
+// Gold line under question
+ctx.shadowBlur = 0;
+ctx.strokeStyle = '#c9b98a';
+ctx.lineWidth = 3;
+ctx.beginPath();
+ctx.moveTo(440, 450);
+ctx.lineTo(840, 450);
+ctx.stroke();
+
+// Bottom label
+ctx.fillStyle = '#c9b98a';
+ctx.font = 'bold 32px Georgia, serif';
+ctx.fillText('THE GOSPEL IN 3 MINUTES', 640, 540);
+
+// Small brand tag at bottom
+ctx.fillStyle = '#7a6f58';
+ctx.font = '22px Georgia, serif';
+ctx.fillText('THE INNER MAN', 640, 650);
+
+// Wire download
+document.getElementById('dl').href = c.toDataURL('image/png');
+</script>
+
+</body>
+</html>
