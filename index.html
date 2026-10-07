@@ -3,79 +3,201 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Inner Man</title>
+<title>The Inner Man — Precept Upon Precept</title>
+<meta name="description" content="Daily teachings from the Word of God, precept upon precept, from the King James Bible. The Gospel of Jesus Christ, plainly declared.">
 <style>
+  * { box-sizing: border-box; }
   body {
     margin: 0;
-    font-family: Georgia, serif;
-    background: #0d0d0d;
+    font-family: Georgia, 'Times New Roman', serif;
+    background: #0a0a0a;
     color: #f5f0e6;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 800px; margin: 0 auto; padding: 0 20px; }
+
+  /* HERO */
+  header {
     text-align: center;
-    padding: 40px 20px;
+    padding: 60px 20px 50px;
+    background: radial-gradient(circle at 50% 0%, #1a1208 0%, #0a0a0a 70%);
+    border-bottom: 1px solid #1e1a12;
   }
   h1 {
-    font-size: 2.2em;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
+    font-size: 2.4em;
+    letter-spacing: 3px;
+    margin: 0 0 12px;
+    color: #ffffff;
+    font-weight: bold;
   }
-  p.tagline {
+  .tagline {
     font-style: italic;
     color: #c9b98a;
-    margin-bottom: 40px;
+    font-size: 1.05em;
+    margin: 0 0 24px;
   }
-  .video-box {
-    background: #1a1a1a;
-    border: 1px solid #333;
-    padding: 60px 20px;
-    max-width: 700px;
-    margin: 0 auto 40px;
-    border-radius: 8px;
+  .hero-verse {
+    font-size: 0.95em;
     color: #888;
+    max-width: 520px;
+    margin: 0 auto;
+    line-height: 1.7;
   }
-  footer {
+  .hero-verse span { color: #c9b98a; display: block; margin-top: 8px; font-size: 0.85em; }
+
+  /* SECTIONS */
+  section { padding: 50px 20px; }
+  h2 {
+    font-size: 1.4em;
+    letter-spacing: 2px;
+    color: #ffffff;
+    margin: 0 0 24px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background: #c9b98a;
+    margin: 14px auto 0;
+  }
+
+  /* VIDEO */
+  .video-frame {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid #1e1a12;
+  }
+  .video-frame iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    border: 0;
+  }
+
+  /* GOSPEL */
+  .gospel {
+    background: #0f0d08;
+    border-top: 1px solid #1e1a12;
+    border-bottom: 1px solid #1e1a12;
+    text-align: center;
+  }
+  .gospel p { max-width: 600px; margin: 0 auto 18px; color: #d8d2c4; }
+  .gospel .verse {
+    font-style: italic;
+    color: #c9b98a;
+    font-size: 1.05em;
+    margin: 26px auto;
+  }
+  .gospel .verse span {
+    display: block;
+    font-style: normal;
     font-size: 0.85em;
-    color: #666;
-    margin-top: 60px;
+    color: #888;
+    margin-top: 6px;
+  }
+  .prayer {
+    background: #1a1610;
+    border-left: 3px solid #c9b98a;
+    padding: 20px 24px;
+    text-align: left;
+    margin: 30px auto;
+    max-width: 600px;
+    border-radius: 4px;
+    color: #e8e2d4;
+    font-style: italic;
+    line-height: 1.8;
+  }
+
+  /* BUTTONS */
+  .btn {
+    display: inline-block;
+    background: #c9b98a;
+    color: #0a0a0a;
+    padding: 14px 32px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 0.95em;
+    margin: 8px 4px;
+    transition: opacity 0.2s;
+  }
+  .btn:hover { opacity: 0.85; }
+
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 40px 20px;
+    color: #555;
+    font-size: 0.85em;
+    border-top: 1px solid #1a1610;
+  }
+  footer a { color: #c9b98a; text-decoration: none; }
+
+  @media (max-width: 500px) {
+    h1 { font-size: 1.8em; letter-spacing: 2px; }
+    h2 { font-size: 1.15em; }
+    .tagline { font-size: 0.95em; }
+    section { padding: 40px 16px; }
   }
 </style>
 </head>
 <body>
 
-  <h1>The Inner Man</h1>
+<header>
+  <h1>THE INNER MAN</h1>
   <p class="tagline">Precept upon precept — the Word of God, daily.</p>
+  <p class="hero-verse">
+    "For which cause we faint not; but though our outward man perish, yet the inward man is renewed day by day."
+    <span>— 2 Corinthians 4:16, KJV</span>
+  </p>
+</header>
 
-  <div class="video-box" style="padding: 0; border: none; background: transparent; max-width: 800px; margin: 0 auto 40px;">
-  <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px;">
-    <iframe 
-      src="https://www.youtube.com/embed/00xJaUAqv4c" 
+<section>
+  <h2>Latest Teaching</h2>
+  <div class="video-frame">
+    <iframe
+      src="https://www.youtube.com/embed/00xJaUAqv4c"
       title="The Gospel in 3 Minutes"
-      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       allowfullscreen>
     </iframe>
   </div>
-  <p style="margin-top: 20px;">
-    <a href="https://youtube.com/@InnerManDaily" 
-       target="_blank"
-       style="display:inline-block;
-              background:#c9b98a;
-              color:#0d0d0d;
-              padding:12px 24px;
-              text-decoration:none;
-              border-radius:6px;
-              font-weight:bold;
-              letter-spacing:1px;
-              font-size: 0.95em;">
-      Subscribe on YouTube
-    </a>
+</section>
+
+<section class="gospel">
+  <h2>The Gospel</h2>
+  <p>There is a question every person must answer: <strong style="color:#fff;">Where will you spend eternity?</strong></p>
+  <p>The Bible says, <em>"For all have sinned, and come short of the glory of God."</em> (Romans 3:23). The wages of sin is death — but the gift of God is eternal life through Jesus Christ our Lord.</p>
+  <p class="verse">
+    "For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life."
+    <span>— John 3:16, KJV</span>
   </p>
-</div>
+  <p>Jesus Christ died in your place, and rose again. There is nothing to earn. Only to receive.</p>
+  <p style="color:#c9b98a; font-style: italic; margin-top: 30px;">Pray this from your heart:</p>
+  <div class="prayer">
+    "Lord Jesus Christ, I am a sinner. I believe You died for me and rose again. I repent. I turn from my sin. Come into my life. Be my Lord and my Saviour. Amen."
+  </div>
+  <p>If you prayed that, and you meant it — the Word of God says you are saved. Find a Bible-believing church. Read the Gospel of John. And never let this moment go.</p>
+</section>
 
-  <p>Give your life to Christ. He is waiting.</p>
+<section style="text-align:center;">
+  <h2>Stay Connected</h2>
+  <p style="color:#a8a294; max-width:520px; margin: 0 auto 24px;">New teachings are uploaded daily. Subscribe on YouTube so you never miss a word.</p>
+  <a class="btn" href="https://youtube.com/@InnerManDaily" target="_blank">Subscribe on YouTube</a>
+</section>
 
-  <footer>
-    &copy; 2026 The Inner Man &middot; @InnerManDaily
-  </footer>
+<footer>
+  &copy; 2026 The Inner Man &middot; <a href="https://youtube.com/@InnerManDaily" target="_blank">@InnerManDaily</a>
+  <p style="margin-top:14px; font-style:italic; color:#444;">To God be all the glory.</p>
+</footer>
 
 </body>
 </html>
